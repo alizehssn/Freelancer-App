@@ -4,7 +4,7 @@ import JobCard from "./Card";
 const JobCardList = (props) => {
     return(
         <div>
-            <JobCard/>
+            <JobCard job={props.job}/>
         </div>
     )
 }
