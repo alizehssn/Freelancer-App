@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
 const routes = require("./routes");
-const PORT = process.env.port || 3006;
+const PORT = process.env.PORT || 3006;
 const app = express();
 app.use(morgan("combined"));
 app.use(express.urlencoded({extended: true}));
