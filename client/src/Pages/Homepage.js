@@ -28,7 +28,7 @@ class Homepage extends Component  {
       };
       makeJobs = (jobs) => {
         return jobs.map(job => {
-            return(
+            return (
                 <AllJobsList 
                 key={job._id}
                 job={job}/>
@@ -37,9 +37,17 @@ class Homepage extends Component  {
       }
     
       render(){
-        return <Container>
+        return (
+      
+        <Container>
+          <div className="col-4 mt-4 ml-2 mb-2 d-flex">
+  
     {this.makeJobs(this.state.jobs)}
+          
+          </div>
     </Container>
+    
+    )
       }
     
 }
