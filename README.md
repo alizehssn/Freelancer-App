@@ -11,7 +11,7 @@ Full Stack - React Application which allows the user to manage their various fre
 * Author
 * License
 ## Installion
-In order to utilize the application the user can clone the Github Repository into their local command line terminal, or view the deployed application.
+In order to utilize the application the user can clone the [Github Repository](https://github.com/alizehssn/Freelancer-App) into their local command line terminal, or view the [Heroku Application](https://young-hollows-29230.herokuapp.com/)
 ## Usage
 The application Homepage displays the user's created jobs with a navigation bar header which allows the user to create or search for a job.
 ## Tests
