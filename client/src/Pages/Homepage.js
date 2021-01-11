@@ -4,6 +4,7 @@
 import React, { Component } from "react";
 import { Container } from "react-bootstrap";
 import AllJobsList from "../Components/List";
+import SearchBox from "../Components/SearchBox";
 
 import API from "../utils/API";
 
@@ -13,6 +14,7 @@ class Homepage extends Component  {
         super();
         this.state = {
          jobs: [],
+         search: ""
         };
       }
       componentDidMount(){
@@ -34,15 +36,22 @@ class Homepage extends Component  {
                 job={job}/>
             )
         })
+      };
+
+      handleChange = (e) => {
+        this.setState({search: e.target.value})
       }
     
       render(){
+        const {jobs, search} = this.state
+        const filteredJobs = jobs.filter(job => { return job.jobTitle.toLowerCase().includes(search.toLowerCase())})
         return (
       
         <Container>
+          <SearchBox handleChange={this.handleChange}/>
           <div className="col-4 mt-4 ml-2 mb-2 d-flex">
   
-    {this.makeJobs(this.state.jobs)}
+    {this.makeJobs(filteredJobs)}
           
           </div>
     </Container>
