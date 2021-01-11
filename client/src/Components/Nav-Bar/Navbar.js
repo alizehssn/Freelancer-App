@@ -13,12 +13,6 @@ import { Link } from "react-router-dom";
         <li className="nav-item">
         <Link className= "nav-link" to = "/jobs"> Create Job </Link>
         </li>
-        <li className="nav-item">
-            <form className="d-flex">
-             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
-            <button className="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </li>
         </ul>
     </nav>
         
