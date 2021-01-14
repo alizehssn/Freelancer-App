@@ -5,11 +5,11 @@ import React from "react";
 
   const date = new Date(props.job.jobDate).toLocaleString();
 
-  const moolah = (props.job.income)
+  const moolah = props.job.income || 0 ;
 
-  const expenses =(props.job.expenses)
+  const expenses =props.job.expenses || 0 ;
 
-  const tips = (props.job.tip)
+  const tips = props.job.tip || 0;
 
   const cashMoney = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(moolah)
   
@@ -34,3 +34,5 @@ import React from "react";
 }
 
 export default JobCard
+
+

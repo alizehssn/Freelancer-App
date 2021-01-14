@@ -21,6 +21,7 @@ const JobForm = (props) => {
             <br />
             <input className="mt-2 input-shadow"
              name="income"
+             type="number"
              placeholder="Enter Income"
              value={props.income}
              onChange={e => props.change(e)}
@@ -28,6 +29,7 @@ const JobForm = (props) => {
             <br />
             <input className="mt-2 input-shadow"
              name="expenses"
+             type="number"
              placeholder="Enter Expenses"
              value={props.expenses}
              onChange={e => props.change(e)}
@@ -35,6 +37,7 @@ const JobForm = (props) => {
             <br />
             <input className="mt-2 input-shadow"
              name="tip"
+             type="number"
              placeholder="Tips"
              value={props.tip}
              onChange={e => props.change(e)}
