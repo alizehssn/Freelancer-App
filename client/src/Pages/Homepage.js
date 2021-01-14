@@ -31,9 +31,11 @@ class Homepage extends Component  {
       makeJobs = (jobs) => {
         return jobs.map(job => {
             return (
+              <div className="col-3 mt-4">
                 <AllJobsList 
                 key={job._id}
                 job={job}/>
+                </div>
             )
         })
       };
@@ -49,7 +51,7 @@ class Homepage extends Component  {
       
         <Container>
           <SearchBox handleChange={this.handleChange}/>
-          <div className="col-4 mt-4 ml-2 mb-2 d-flex">
+          <div className="mx-2 d-flex row">
   
     {this.makeJobs(filteredJobs)}
           

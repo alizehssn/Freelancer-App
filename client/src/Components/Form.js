@@ -12,6 +12,7 @@ const JobForm = (props) => {
             />
             <br />
             <input className="mt-2 input-shadow"
+            type="datetime-local"
              name="jobDate"
              placeholder="Date"
              value={props.jobDate}
