@@ -5,10 +5,17 @@ import React from "react";
 
   const date = new Date(props.job.jobDate).toLocaleString();
 
-  // const formattedDate= new Intl.DateTimeFormat('en-US', { dateStlye: 'full', timeStyle: 'short' }).format(date) ;
+  const moolah = (props.job.income)
 
-  // const formattedDay = new Intl.DateTimeFormat('en-US').format(date);
+  const expenses =(props.job.expenses)
+
+  const tips = (props.job.tip)
+
+  const cashMoney = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(moolah)
   
+  const Expense = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(expenses)
+
+  const $$$ = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(tips)
 
   return(
       <div className="card">
@@ -17,9 +24,9 @@ import React from "react";
       </div>
 <ul className="list-group list-group-flush">
   <li className="list-group-item">{date}</li>
-  <li className="list-group-item">Income: {props.job.income}</li>
-  <li className="list-group-item">Expenses: {props.job.expenses}</li>
-  <li className="list-group-item">Tips: {props.job.tip}</li>
+  <li className="list-group-item">Income: {cashMoney}</li>
+  <li className="list-group-item">Expenses: {Expense}</li>
+  <li className="list-group-item">Tips: {$$$}</li>
 </ul>
 </div>
   )
