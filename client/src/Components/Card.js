@@ -5,7 +5,7 @@ import React from "react";
   return(
       <div className="card">
       <div className="card-header">
-          Job - {props.job.jobTitle}
+          {props.job.jobTitle}
       </div>
 <ul className="list-group list-group-flush">
   <li className="list-group-item">Date: {props.job.jobDate}</li>

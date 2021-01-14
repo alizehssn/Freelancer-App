@@ -2,43 +2,44 @@ import React from "react";
 
 const JobForm = (props) => {
     return(
-        <form>
+        <form className="mt-4" className="mt-4">
             <input
+            className="input-shadow"
              name="jobTitle"
              placeholder="Enter Job"
              value={props.jobTitle}
              onChange={e => props.change(e)}
             />
             <br />
-            <input
+            <input className="mt-2 input-shadow"
              name="jobDate"
              placeholder="Date"
              value={props.jobDate}
              onChange={e => props.change(e)}
             />
             <br />
-            <input
+            <input className="mt-2 input-shadow"
              name="income"
              placeholder="Enter Income"
              value={props.income}
              onChange={e => props.change(e)}
             />
             <br />
-            <input
+            <input className="mt-2 input-shadow"
              name="expenses"
              placeholder="Enter Expenses"
              value={props.expenses}
              onChange={e => props.change(e)}
             />
             <br />
-            <input
+            <input className="mt-2 input-shadow"
              name="tip"
              placeholder="Tips"
              value={props.tip}
              onChange={e => props.change(e)}
             />
             <br />
-            <button onClick= {(e) => props.submit(e)}>Submit</button>
+            <button className="mt-2" onClick= {(e) => props.submit(e)}>Submit</button>
         </form>
     )
 }
