@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Login from '../auth0/login-button'
  function Nav() {
+
+    console.group(process.env);
+
     return (
      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
         <a className="navbar-brand" href="#">
@@ -12,6 +16,9 @@ import { Link } from "react-router-dom";
         </li>
         <li className="nav-item">
         <Link className= "nav-link" to = "/jobs"> Create Job </Link>
+        </li>
+        <li className="nav-item">
+            <Login />
         </li>
         </ul>
     </nav>
