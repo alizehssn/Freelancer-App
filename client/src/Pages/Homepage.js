@@ -5,7 +5,7 @@ import React, { Component } from "react";
 import { Container } from "react-bootstrap";
 import AllJobsList from "../Components/List";
 import SearchBox from "../Components/SearchBox";
-
+import { withAuthenticationRequired } from '@auth0/auth0-react';
 import API from "../utils/API";
 
 
@@ -18,6 +18,8 @@ class Homepage extends Component  {
         };
       }
       componentDidMount(){
+        const { user } = this.props.auth0;
+        console.log(user)
           this.loadJobs();
       }
       loadJobs = () =>{
@@ -47,6 +49,7 @@ class Homepage extends Component  {
       render(){
         const {jobs, search} = this.state
         const filteredJobs = jobs.filter(job => { return job.jobTitle.toLowerCase().includes(search.toLowerCase())})
+        
         return (
       
         <Container>
@@ -63,4 +66,4 @@ class Homepage extends Component  {
     
 }
 
-export default Homepage
+export default withAuthenticationRequired(Homepage)

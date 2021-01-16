@@ -21,7 +21,7 @@ function App(){
    
     
     <div className="App">
-      <Nav/>
+      <Auth0Provider><Nav/>
       <Switch>
         <Route exact path= "/"
          render={ ()=> <Homepage/>
@@ -30,6 +30,8 @@ function App(){
          render={ ()=> <CreateJob/>
          }/>
       </Switch>
+      </Auth0Provider>
+      
     </div>
     
   )

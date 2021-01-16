@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Login from '../auth0/login-button'
+import Login from '../auth0/auth-button'
  function Nav() {
 
     console.group(process.env);
