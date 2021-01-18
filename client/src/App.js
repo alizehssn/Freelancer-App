@@ -5,6 +5,11 @@ import CreateJob from "./Pages/CreateJob";
 import './App.css';
 
 function App(){
+
+  const { isLoading, error } = useAuth0();
+  if (error) {
+    return <div>Oops... {error.message}</div>;
+  }
   
   return (
     <Router>
