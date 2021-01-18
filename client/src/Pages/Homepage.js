@@ -3,7 +3,7 @@
 
 import React, { Component } from "react";
 import { Container } from "react-bootstrap";
-import AllJobsList from "../Components/List";
+import JobCardList from "../Components/List";
 import SearchBox from "../Components/SearchBox";
 
 import API from "../utils/API";
@@ -32,7 +32,7 @@ class Homepage extends Component  {
         return jobs.map(job => {
             return (
               <div className="col-3 mt-4">
-                <AllJobsList 
+                <JobCardList
                 key={job._id}
                 job={job}/>
                 </div>
