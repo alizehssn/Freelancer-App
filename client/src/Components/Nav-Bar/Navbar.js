@@ -1,5 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Login from '../Auth0/Auth-btn'
+
+
+
  function Nav() {
     return (
      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -13,10 +17,13 @@ import { Link } from "react-router-dom";
         <li className="nav-item">
         <Link className= "nav-link" to = "/jobs"> Create Job </Link>
         </li>
+        <li className="nav-item">
+            <Login />
+        </li>
         </ul>
     </nav>
         
     );
 }
 
-export default Nav
+export default Nav;

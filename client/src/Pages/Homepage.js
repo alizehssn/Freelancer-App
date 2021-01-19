@@ -5,6 +5,7 @@ import React, { Component } from "react";
 import { Container } from "react-bootstrap";
 import JobCardList from "../Components/List";
 import SearchBox from "../Components/SearchBox";
+import { withAuthenticationRequired } from '@auth0/auth0-react';
 
 import API from "../utils/API";
 
@@ -18,6 +19,8 @@ class Homepage extends Component  {
         };
       }
       componentDidMount(){
+        // Should this be here?
+        // const { user } = this.props.auth0;
           this.loadJobs();
       }
       loadJobs = () =>{
@@ -63,4 +66,4 @@ class Homepage extends Component  {
     
 }
 
-export default Homepage
+export default withAuthenticationRequired(Homepage)
